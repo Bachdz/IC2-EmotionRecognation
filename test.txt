@@ -1,0 +1,23 @@
+25 epochs:
+
+sad: 5.jpg --> 0: angry
+     7.jpg --> 2: fear
+     8.jpg --> 2: fear
+     9.jpg --> 6: surprise
+     10.jpg --> 0: angry (bild nicht vollständig)
+     11.jpg --> 2: fear
+
+
+
+50 epochs:
+
+sad: 	5.jpg --> 5: sad
+	7.jpg --> 5: sad
+	8.jpg --> 5: sad
+	9.jpg --> 5: sad
+	10.jpg --> 3: happy (bild nicht vollständig)
+	11.jpg --> 5: sad
+
+
+	
+	  

@@ -1,0 +1,6 @@
+dataset_original/
+dataset_training/
+model.h5
+model_25_epochs.h5
+model_50_epochs.h5
+new_model.h5
