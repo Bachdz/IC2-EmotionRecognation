@@ -2,16 +2,12 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import tensorflow as tf
 import cv2
-from matplotlib import use as mpl_use
 import matplotlib.pyplot as plt
 import numpy as np
 import getopt, sys
 import socketio
 import base64
-import threading
 import time
-
-mpl_use('TkAgg')
 
 sio = socketio.Client()
 sio.connect('http://localhost:8000')
@@ -57,7 +53,6 @@ def main(argv):
             facess = face_cascade.detectMultiScale(roi_gray)
             if len(facess) == 0:
                 raise Exception('face not detected')
-                print("face not detected")  # no face detected in face, throw error
             else:
                 for (ex, ey, ew, eh) in facess:
                     face_roi = roi_color[ey: ey + eh, ex:ex + ew]
