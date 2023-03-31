@@ -1,43 +1,16 @@
 import tensorflow as tf
 from tensorflow import keras
-print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
-
 from tensorflow.keras import layers
 import cv2
-from matplotlib import use as mpl_use
-import matplotlib.pyplot as plt
 import numpy as np
 import os
 import random
 
-mpl_use('TkAgg')
 Data_dir = "dataset_original/train"
-Classes = ["angry", "disgust", "fear", "happy", "neutral", "sad", "surprise"]
-# img_array = cv2.imread("dataset_training/train/0/Training_3908.jpg")
-
-# # rgb
-# img_array.shape
-#
-# plt.imshow(img_array)
-
-# for category in Classes:
-#     path = os.path.join(Data_dir, category)
-#     for img in os.listdir(path):
-#         img_array = cv2.imread(os.path.join(path, img))
-#         # plt.imshow(cv2.cvtColor(img_array, cv2.COLOR_BGR2RGB))
-#         # plt.show()
-#         break
-#     break
+Classes = ["0", "1", "2", "3", "4", "5", "6"]
 
 img_size = 224
-# new_array = cv2.resize(img_array, (img_size, img_size))
-# plt.imshow(cv2.cvtColor(new_array, cv2.COLOR_BGR2RGB))
-# plt.show()
-
-# print(new_array.shape)
-
 training_data = []
-
 
 # read images data and convert to array
 def create_training_data():
@@ -51,7 +24,6 @@ def create_training_data():
                 training_data.append([new_array, class_num])
             except Exception as e:
                 pass
-
 
 create_training_data()
 print(len(training_data))
@@ -83,7 +55,7 @@ print("data normalized")
 Y = np.array(y)
 
 print("training model...")
-# train model
+# # load pre-trained model for transfer learning
 model = tf.keras.applications.MobileNetV2() # pre-trained model
 
 
