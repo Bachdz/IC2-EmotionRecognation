@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>IC2 Emotion Detector</title>
+    <title>Home/Emotion Detector</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="http://chalarangelo.github.io/htmltemplategenerator/">
@@ -16,9 +16,29 @@
 <body>
 <h1>Emotion Detector</h1>
 <h3>Please upload an image to detect emotion</h3>
-<form action="/upload" method="post" enctype="multipart/form-data">
-    <input type="file" name="image" id="file">
-    <input type="submit" value="Upload" name="submit">
+<form class="bg-secondary.bg-gradient" action="/detect" method="post" enctype="multipart/form-data">
+    <% if (typeof errors !== "undefined") { %>
+        <% for(const error of errors) { %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+    <% } %>
+    <p>Please select a model to continue:</p>
+    <input class="form-check-input" type="radio" id="model1" name="model" value="1">
+    <label class="form-check-label" for="model1">Model train with half of training data</label><br>
+    <input class="form-check-input" type="radio" id="model2" name="model" value="2">
+    <label class="form-check-label" for="model2">Model train with 25 epochs</label><br>
+    <input class="form-check-input" type="radio" id="model3" name="model" value="3">
+    <label class="form-check-label" for="model3">Model trained with 50 epochs</label><br>
+    <p>
+        <input class="form-control" type="file" name="image" id="file">
+    </p>
+    <p>
+        <button type="submit" class="btn btn-primary">Detect</button>
+    </p>
 </form>
+
+
 </body>
 </html>
