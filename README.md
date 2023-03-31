@@ -6,6 +6,7 @@ It is part of my work in the Independent Course 2 at HTW Berlin under the superv
 ## Install the required dependencies
 
 Run `npm install` to build and install the added libaries for the webapp.
+
 Run `pip install -r requirements.txt` to install the required libaries for the python scripts, which are used to train the models and run the detection.
 
 ## Extract the pre-trainied models
