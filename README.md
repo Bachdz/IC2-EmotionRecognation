@@ -11,7 +11,7 @@ Run `pip install -r requirements.txt` to install the required libaries for the p
 
 ## Extract the pre-trainied models
 
-All pre-trained models are included in the project directory within the models.rar file.
+All pre-trained models are included in the project directory within the `models.rar` file.
 Before run the detection `main.py` script, as well as to make the app run properly, please extract all the models from the rar file.
 
 ## Development server
