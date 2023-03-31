@@ -55,13 +55,9 @@ router.post('/', upload.single('image'), (req, res, next) => {
             return res.render('home', {errors})
         }
 
-        // res.write("Processing image...");
         runDetection(req.file.path, req.body.model)
         res.render('detection')
-        //     .then(function (fromRunpy) {
-        //     console.log(fromRunpy.toString());
-        //     // res.end(fromRunpy);
-        // });
+
     } catch (err) {
         next(err)
     }
