@@ -29,13 +29,13 @@ def main(argv):
 
     if modelfile == "1":
         print("Loading model 1")
-        model = tf.keras.models.load_model('model.h5')
+        model = tf.keras.models.load_model('models/model.h5')
     elif modelfile == "2":
         print("Loading model 2")
-        model = tf.keras.models.load_model('model_25_epochs.h5')
+        model = tf.keras.models.load_model('models/model_25_epochs.h5')
     elif modelfile == "3":
         print("Loading model 3")
-        model = tf.keras.models.load_model('model_50_epochs.h5')
+        model = tf.keras.models.load_model('models/model_50_epochs.h5')
     else:
         print('Invalid model file')
         sys.exit()
