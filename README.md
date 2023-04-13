@@ -18,7 +18,9 @@ Before run the detection `main.py` script, as well as to make the app run proper
 
 Run `npm run dev` for a realtime dev server with nodemon . Navigate to `http://localhost:8000/`. The app will automatically reload if you change any of the source files.
 
+## Important for MAC-User
 
+TensorFlow for mac has to be installed a little bit different. Please follow this steps to install TensorFlow for MAC: https://developer.apple.com/metal/tensorflow-plugin/. Don't forget to uncomment the line `tensorflow~=2.11.0` in `requirement.txt`
 
 
 
