@@ -11,7 +11,7 @@ Run `pip install -r requirements.txt` to install the required libaries for the p
 
 ### Important for MAC-User
 
-TensorFlow for mac has to be installed a little bit different. Please follow this steps to install TensorFlow for MAC: https://developer.apple.com/metal/tensorflow-plugin/. Don't forget to comment the line `tensorflow~=2.11.0` in `requirement.txt`
+TensorFlow for mac has to be installed a little bit different. Please follow this steps to install TensorFlow for MAC: https://developer.apple.com/metal/tensorflow-plugin/. Don't forget to comment the line `tensorflow~=2.11.0` in `requirements.txt`
 
 ## Extract the pre-trainied models
 
